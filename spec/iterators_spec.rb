@@ -94,15 +94,15 @@ end
   #eql?
   describe "#eql?" do
     it "should return true if an identical array is compared" do
-      expect(@arr.eql?{ |num| obj ==  arr }).to be(true)
+      expect(@arr.eql?([1,2,3,4,5])).to be(true)
     end
   end
 
   #include?
   describe "#include?" do
     it "should return true if the parameter passed to include? is in the array" do
-      expect(@arr.any? { |num| @arr.include? }) .to be(true)
-      expect().to be()
+      expect(@hash.include? (:a)).to be(true)
+      expect(@hash.include?(:c)).to be(false)
     end
   end
 
@@ -118,7 +118,7 @@ end
   #key?
   describe "hash method - #key?" do
     it "should return true if hash contains a key of :b" do
-      expect(@hash.has_key? (:a)).to be(true)
+      expect(@hash.has_key? (:b)).to be(true)
     end
   end
 
@@ -139,8 +139,11 @@ end
   #delete_if
   describe "hash method - #delete_if" do
     it "should delete key/value pair for any value equal to 100" do
-      expect(@hash.delete_if{ |key, val| val = "100" }).to eq(:b => 200)
+      expect(@hash.delete_if{ |key, val| val == 100 }).to eq(:b => 200)
     end
   end
 
 end #end describe iterators
+
+
+

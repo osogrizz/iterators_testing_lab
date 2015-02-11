@@ -31,7 +31,7 @@ May be helpful to look in [Enumerable](http://ruby-doc.org/core-2.2.0/Enumerable
 
 
 ####partition:
-    returns two arrays the first containing the elements of enum for which the block evaluates to true, thesecond containing the rest.
+    returns two arrays the first containing the elements of enum for which the block evaluates to true, the second containing the rest.
 
     If no block is given n Enumerator is returned instead.
 
